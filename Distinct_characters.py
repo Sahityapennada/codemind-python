@@ -1,17 +1,7 @@
-n = input()
-n = n.lower()
-n = n.replace(" ","")
-s = []
-for i in range(0,len(n)):
-    c = n.count(n[i])
-    if c==1:
-        s.append(n[i])
-s.sort()
-s = str(s)
-s = s.replace(",","")
-s = s.replace("[","")
-s = s.replace("]","")
-s = s.replace(",","")
-s = s.replace("'","")
-s = s.replace(" ","")
-print(s)
+a=input().replace(' ','')
+a=a.lower()
+s=[]
+for i in a:
+    if i not in s:
+        s.append(i)
+print(''.join(sorted(s)))
